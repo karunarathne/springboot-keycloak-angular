@@ -15,4 +15,4 @@ Spring Boot Keycloak Angular integration
 * Run the command `ng serve`
 
 # Open the Application
-* Click (here)[http://localhost:4200] to open the application
+* Click [here](http://localhost:4200) to open the application
