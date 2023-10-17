@@ -12,7 +12,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let employee of employeeList" (click)="selectEmployee(employee)">
-          <th scope="row">{{employee.employeeId}}</th>
+          <td scope="row">{{employee.employeeId}}</td>
           <td>{{employee.name}}</td>
           <td>{{employee.emailAddress}}</td>
           <td>{{employee.phoneNumber}}</td>
@@ -26,9 +26,9 @@
       <div class="col-sm-6 col-md-3 pagination-bar">
         <nav aria-label="Page navigation example" *ngIf="totalPages > 1">
             <ul class="pagination pagination-sm">
-              <li class="page-item"><a class="page-link" href="#" *ngIf="currentPage > 0" (click)="gotoPage(currentPage - 1)">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#" *ngFor="let page of getPageRange()" (click)="gotoPage(page)">{{page}}</a></li>
-              <li class="page-item"><a class="page-link" href="#" *ngIf="currentPage < (totalPages - 1)" (click)="gotoPage(currentPage + 1)">Next</a></li>
+              <li class="page-item" (click)="gotoPage(currentPage - 1)" [ngClass]="{'disabled': currentPage == 0}"><a class="page-link">Previous</a></li>
+              <li class="page-item" (click)="gotoPage(page)" *ngFor="let page of getPageRange()" [ngClass]="{'active': currentPage == page}"><a class="page-link">{{page + 1}}</a></li>
+              <li class="page-item" (click)="gotoPage(currentPage + 1)" [ngClass]="{'disabled': currentPage == (totalPages - 1)}"><a class="page-link">Next</a></li>
             </ul>
           </nav>
         </div>

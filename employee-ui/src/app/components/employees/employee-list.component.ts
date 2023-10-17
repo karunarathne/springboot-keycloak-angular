@@ -36,6 +36,11 @@ export class EmployeeListComponent {
   }
 
   gotoPage(page : number) : void {
+    if(page < 0 || page >= this.totalPages) {
+      return;
+    }
+    
+    this.currentPage = page;
     this.pageChange.emit(page);
   }
 
