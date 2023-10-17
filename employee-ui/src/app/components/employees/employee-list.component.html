@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let employee of employeeList" (click)="selectEmployee(employee)">
+        <tr *ngFor="let employee of employeeList" (click)="selectEmployee(employee)" [ngClass]="{'highlight': employee.id == selectedEmployee?.id}">
           <td scope="row">{{employee.employeeId}}</td>
           <td>{{employee.name}}</td>
           <td>{{employee.emailAddress}}</td>

@@ -33,6 +33,7 @@ export class EmployeesComponent implements OnInit {
     this.employeeService.getEmployeePage(page).subscribe(res => {
       this.totalPages = res.totalPages;
       this.employeeList = res.content;
+      this.currentEmployee = {};
     },err => {
       console.log(err);
     });

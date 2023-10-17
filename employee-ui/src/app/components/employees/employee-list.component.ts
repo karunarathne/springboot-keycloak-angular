@@ -46,6 +46,7 @@ export class EmployeeListComponent {
 
   addEmployee() : void {
     this.add.emit();
+    this.selectedEmployee = undefined;
   }
 
   selectEmployee(employee : Employee) : void {

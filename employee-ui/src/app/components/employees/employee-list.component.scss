@@ -17,4 +17,8 @@
             gap: 10px;
         }
     }
+
+    .table tbody tr.highlight td {
+        background-color: rgb(19, 149, 170);
+    }
 }
