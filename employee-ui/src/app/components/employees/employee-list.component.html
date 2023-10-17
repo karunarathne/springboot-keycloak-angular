@@ -1,12 +1,13 @@
-<div class="row">
-  <div class="col-12">
+<div class="row employee-list-panel">
+  <div class="col-12 employee-data-panel">
     <table class="table table-hover table-sm">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Employee ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Designation</th>
         </tr>
       </thead>
       <tbody>
@@ -15,26 +16,29 @@
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
+          <td>@mdo</td>
         </tr>
         <tr>
           <th scope="row">2</th>
           <td>Jacob</td>
           <td>Thornton</td>
           <td>@fat</td>
+          <td>@fat</td>
         </tr>
         <tr>
           <th scope="row">3</th>
           <td colspan="2">Larry the Bird</td>
           <td>@twitter</td>
+          <td>@twitter</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="col-12">
+  <div class="col-12 employee-control-panel">
     <div class="row">
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-3 pagination-bar">
         <nav aria-label="Page navigation example">
-            <ul class="pagination">
+            <ul class="pagination pagination-sm">
               <li class="page-item"><a class="page-link" href="#">Previous</a></li>
               <li class="page-item"><a class="page-link" href="#">1</a></li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -43,9 +47,9 @@
             </ul>
           </nav>
         </div>
-        <div class="col-sm-6 col-md-9">
-            <button type="button" class="btn btn-danger">Delete</button>
-            <button type="button" class="btn btn-primary">Add</button>
+        <div class="col-sm-6 col-md-9 button-bar">
+            <button type="button" class="btn btn-sm btn-danger">Delete</button>
+            <button type="button" class="btn btn-sm btn-secondary">Add</button>
         </div>
     </div>
   </div>

@@ -11,6 +11,9 @@ import { EmployeeComponent } from './components/employees/employee.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/layout/header.component';
+import { NavigatorComponent } from './components/layout/navigator.component';
+import { FooterComponent } from './components/layout/footer.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -34,7 +37,10 @@ function initializeKeycloak(keycloak: KeycloakService) {
     EmployeesComponent,
     Error404Component,
     EmployeeListComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    HeaderComponent,
+    NavigatorComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,26 @@
 
-.container {
-    overflow-y:auto;
-    height:100vh;
+.app-page {
+    height: calc(100vh);
+
+    .header {
+        height: 40.4px;
+        background-color: #EFEFEF;
+        border-bottom: 1px solid #a7a1a1;
+    }
+
+    .navigator {
+        height: 38.4px;
+        background-color: #EFEFEF;
+        border-bottom: 1px solid #a7a1a1;
+    }
+
+    .dynamic-content {
+        height: calc(100vh - 120px);
+    }
+
+    .footer {
+        height: 40px;
+        background-color: #EFEFEF;
+        border-top: 1px solid #a7a1a1;
+    }
 }

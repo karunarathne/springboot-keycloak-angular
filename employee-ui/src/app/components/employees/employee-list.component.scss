@@ -1,0 +1,20 @@
+.employee-list-panel {
+    .employee-data-panel {
+        min-height: 200px;
+    }
+
+    .employee-control-panel {
+        .pagination-bar {
+            
+        }
+
+        .button-bar {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            gap: 10px;
+        }
+    }
+}

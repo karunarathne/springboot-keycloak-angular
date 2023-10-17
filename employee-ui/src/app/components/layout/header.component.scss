@@ -1,0 +1,15 @@
+.header-panel {
+    .left-panel {
+        
+    }
+
+    .right-panel {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+
+        .userInfoLabel {
+            padding-top: 5px;
+        }
+    }
+}

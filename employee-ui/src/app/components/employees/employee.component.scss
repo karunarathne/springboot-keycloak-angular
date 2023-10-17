@@ -1,0 +1,14 @@
+.employee-panel {
+
+    .form-group {
+        margin-top: 20px;
+    }
+
+    .button-bar {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 10px;
+    }
+}
