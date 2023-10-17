@@ -11,25 +11,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-          <td>@twitter</td>
+        <tr *ngFor="let employee of employeeList" (click)="selectEmployee(employee)">
+          <th scope="row">{{employee.employeeId}}</th>
+          <td>{{employee.name}}</td>
+          <td>{{employee.emailAddress}}</td>
+          <td>{{employee.phoneNumber}}</td>
+          <td>{{employee.designation}}</td>
         </tr>
       </tbody>
     </table>
@@ -37,19 +24,17 @@
   <div class="col-12 employee-control-panel">
     <div class="row">
       <div class="col-sm-6 col-md-3 pagination-bar">
-        <nav aria-label="Page navigation example">
+        <nav aria-label="Page navigation example" *ngIf="totalPages > 1">
             <ul class="pagination pagination-sm">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              <li class="page-item"><a class="page-link" href="#" *ngIf="currentPage > 0" (click)="gotoPage(currentPage - 1)">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#" *ngFor="let page of getPageRange()" (click)="gotoPage(page)">{{page}}</a></li>
+              <li class="page-item"><a class="page-link" href="#" *ngIf="currentPage < (totalPages - 1)" (click)="gotoPage(currentPage + 1)">Next</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-sm-6 col-md-9 button-bar">
-            <button type="button" class="btn btn-sm btn-danger">Delete</button>
-            <button type="button" class="btn btn-sm btn-secondary">Add</button>
+            <button type="button" class="btn btn-sm btn-danger" (click)="deleteEmployee()">Delete</button>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="addEmployee()">Add</button>
         </div>
     </div>
   </div>
